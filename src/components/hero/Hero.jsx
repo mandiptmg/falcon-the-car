@@ -12,7 +12,7 @@ const hero = () => {
           </button>
           <div className='md:max-w-xs'>
             <p className='mt-4 font-bold   text-3xl md:text-5xl'>
-              Welcome to Car Buying Made Simple
+              Welcome To Car Buying Made Simple
             </p>
             <p className='mt-6 text-sm font-semibold text-gray-700'>
               Get more value in the affordable seven-passenger Chrysler Pacofoca
