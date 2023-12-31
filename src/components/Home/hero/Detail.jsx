@@ -21,7 +21,7 @@ const data = [
 ]
 const Detail = () => {
   return (
-    <div id='art' className='pb-40 pt-20'>
+    <div id='art' className='py-20'>
       <div data-aos='fade-up' className='w-full grid place-items-center'>
         <h1 className='font-bold md:max-w-md text-center text-2xl md:text-4xl capitalize  '>
           we have mastered the art of detailing

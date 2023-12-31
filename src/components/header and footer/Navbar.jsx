@@ -1,71 +1,91 @@
 import {FaBars,FaTimes} from 'react-icons/fa'
 import { useGlobalContext } from '../context/context'
+import { NavLink } from 'react-router-dom'
+import logo from '../../assets/icon.png'
 
 const Navbar = () => {
 const {show, setShow} = useGlobalContext()
   return (
-    <div data-aos='fade-down'>
-      <div className='flex  relative justify-between items-center h-20'>
-        <div>
-          <h1 className='font-semibold text-lg font-sans'>Falcon</h1>
+    <div className='bg-black/80 '>
+      <div
+        data-aos='fade-down'
+        className='md:w-[80vw] text-white  mx-auto max-w-7xl w-[90vw]'
+      >
+        <div className='flex relative justify-between items-center h-20'>
+          <div>
+            <NavLink to='/'>
+              <button className='font-semibold text-blue-500 gap-1 text-2xl flex  font-sans'>
+<img src={logo} alt="logo" />
+                Falcon
+              </button>
+            </NavLink>
+          </div>
+          <div className='hidden md:block'>
+            <ul className='uppercase text-sm font-medium flex items-center gap-4'>
+              <li className='drop-shadow-lg'>
+                <NavLink activeClassName='text-orange-400' to='/'>
+                  Home
+                </NavLink>
+              </li>
+              <li className='drop-shadow-lg'>
+                <NavLink activeClassName='text-orange-400' to='/inventory'>
+                  inventory
+                </NavLink>
+              </li>
+              <li className='drop-shadow-lg'>
+                <NavLink activeClassName='text-orange-400' to='/shop'>
+                  shop
+                </NavLink>
+              </li>
+              <li className='drop-shadow-lg'>
+                <NavLink activeClassName='text-orange-400' to='/contact'>
+                  contact
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className='flex items-center gap-2'>
+            <button className='uppercase text-sm font-semibold text-black bg-white px-2 rounded py-2'>
+              buy now
+            </button>
+            <button
+              onClick={() => setShow(!show)}
+              className='text-xl md:hidden  text-sky-400'
+            >
+              {show ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
         </div>
-        <div className='hidden md:block'>
-          <ul className='uppercase text-sm font-medium flex items-center gap-4'>
+        <div
+          className={
+            show
+              ? 'bg-transparent w-full  h-screen grid place-items-center'
+              : 'hidden'
+          }
+        >
+          <ul className='uppercase text-3xl  font-medium text-slate-400 grid text-center gap-y-14'>
             <li>
-              <a href='#home'>Home</a>
+              <NavLink onClick={() => setShow(false)} to='/'>
+                Home
+              </NavLink>
             </li>
             <li>
-              <a href='#'>inventory</a>
+              <NavLink onClick={() => setShow(false)} to='/inventory'>
+                inventory
+              </NavLink>
             </li>
             <li>
-              <a href='#'>shop</a>
+              <NavLink onClick={() => setShow(false)} to='/shop'>
+                shop
+              </NavLink>
             </li>
             <li>
-              <a href='#'>contact</a>
+              <NavLink onClick={() => setShow(false)} to='contact'>
+                contact
+              </NavLink>
             </li>
           </ul>
         </div>
-        <div className='flex items-center gap-2'>
-          <button className='uppercase text-sm bg-black text-white px-2 py-2'>
-            buy now
-          </button>
-          <button
-            onClick={() => setShow(!show)}
-            className='text-xl md:hidden  text-sky-400'
-          >
-            {show ? <FaTimes className='' /> : <FaBars />}
-          </button>
-        </div>
-      </div>
-      <div
-        className={
-          show
-            ? 'bg-white w-full  h-screen grid place-items-center'
-            : 'hidden'
-        }
-      >
-        <ul className='uppercase text-3xl  font-medium text-slate-800 grid text-center gap-y-14'>
-          <li>
-            <a onClick={() => setShow(false)} href='#home'>
-              Home
-            </a>
-          </li>
-          <li>
-            <a onClick={() => setShow(false)} href='#'>
-              inventory
-            </a>
-          </li>
-          <li>
-            <a onClick={() => setShow(false)} href='#'>
-              shop
-            </a>
-          </li>
-          <li>
-            <a onClick={() => setShow(false)} href='#'>
-              contact
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   )

@@ -1,12 +1,12 @@
-import img1 from '../../assets/cars/bmw.png';
-import img2 from '../../assets/cars/supra.png';
-import img3 from '../../assets/cars/Bugatti Chiron.png';
-import img4 from '../../assets/cars/mercedes.png';
-import img5 from '../../assets/cars/Ferrari.png';
-import img6 from '../../assets/cars/mclaren.png';
-import img7 from '../../assets/cars/gtr.png';
-import img8 from '../../assets/cars/royal rolls.png';
-import img9 from '../../assets/cars/Lamborghini.png';
+import img1 from '../../../assets/cars/bmw.png';
+import img2 from '../../../assets/cars/supra.png';
+import img3 from '../../../assets/cars/Bugatti Chiron.png';
+import img4 from '../../../assets/cars/mercedes.png';
+import img5 from '../../../assets/cars/Ferrari.png';
+import img6 from '../../../assets/cars/mclaren.png';
+import img7 from '../../../assets/cars/gtr.png';
+import img8 from '../../../assets/cars/royal rolls.png';
+import img9 from '../../../assets/cars/Lamborghini.png';
 import { useState } from 'react';
 
 const data =[

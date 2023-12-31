@@ -1,9 +1,9 @@
-import img1 from '../../assets/icons/customer-service.png'
-import img2 from '../../assets/icons/car.png'
-import img3 from '../../assets/icons/map.png'
-import img4 from '../../assets/icons/life-protection.png'
-import img5 from '../../assets/icons/steering-wheel.png'
-import img6 from '../../assets/icons/shield.png'
+import img1 from '../../../assets/icons/customer-service.png'
+import img2 from '../../../assets/icons/car.png'
+import img3 from '../../../assets/icons/map.png'
+import img4 from '../../../assets/icons/life-protection.png'
+import img5 from '../../../assets/icons/steering-wheel.png'
+import img6 from '../../../assets/icons/shield.png'
 
 const data = [
   {

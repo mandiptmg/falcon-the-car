@@ -1,6 +1,6 @@
-import img from '../../assets/mechanic/img.png'
-import img1 from '../../assets/mechanic/img1.png'
-import img2 from '../../assets/mechanic/img2.png'
+import img from '../../../assets/mechanic/img.png'
+import img1 from '../../../assets/mechanic/img1.png'
+import img2 from '../../../assets/mechanic/img2.png'
 
 import { FaChevronCircleRight } from 'react-icons/fa'
 
@@ -44,9 +44,7 @@ const Team = () => {
           width='100%'
           height='450'
           src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.03610183194!2d-74.30933397609385!3d40.69753995777949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2snp!4v1701270648772!5m2!1sen!2snp'
-          frameborder='0'
           loading='lazy'
-          allowfullscreen
         ></iframe>
       </div>
       <div className='mt-20 p-6 text-white md:px-14 md:py-6 bg-sky-400 flex justify-between items-center'>
