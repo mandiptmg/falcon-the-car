@@ -6,14 +6,14 @@ import Team from './our team/Team'
 
 const Home = () => {
   return (
-    <div className=''>
+    <div>
       <Hero />
       <div className='md:w-[80vw] mx-auto max-w-7xl w-[90vw]'>
         <Detail />
         <Dealer />
         <Choose />
-        <Team />
       </div>
+      <Team />
     </div>
   )
 }

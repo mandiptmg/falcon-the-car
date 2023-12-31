@@ -6,7 +6,7 @@ import logo from '../../assets/icon.png'
 const Navbar = () => {
 const {show, setShow} = useGlobalContext()
   return (
-    <div className='bg-black/80 '>
+    <div className='bg-black/80'>
       <div
         data-aos='fade-down'
         className='md:w-[80vw] text-white  mx-auto max-w-7xl w-[90vw]'
@@ -15,7 +15,7 @@ const {show, setShow} = useGlobalContext()
           <div>
             <NavLink to='/'>
               <button className='font-semibold text-blue-500 gap-1 text-2xl flex  font-sans'>
-<img src={logo} alt="logo" />
+                <img src={logo} alt='logo' />
                 Falcon
               </button>
             </NavLink>
@@ -28,8 +28,8 @@ const {show, setShow} = useGlobalContext()
                 </NavLink>
               </li>
               <li className='drop-shadow-lg'>
-                <NavLink activeClassName='text-orange-400' to='/inventory'>
-                  inventory
+                <NavLink activeClassName='text-orange-400' to='/about-us'>
+                  About Us
                 </NavLink>
               </li>
               <li className='drop-shadow-lg'>
@@ -38,8 +38,13 @@ const {show, setShow} = useGlobalContext()
                 </NavLink>
               </li>
               <li className='drop-shadow-lg'>
+                <NavLink activeClassName='text-orange-400' to='/testimonials'>
+                  Testimonials
+                </NavLink>
+              </li>
+              <li className='drop-shadow-lg'>
                 <NavLink activeClassName='text-orange-400' to='/contact'>
-                  contact
+                  contact us
                 </NavLink>
               </li>
             </ul>
@@ -59,7 +64,7 @@ const {show, setShow} = useGlobalContext()
         <div
           className={
             show
-              ? 'bg-transparent w-full  h-screen grid place-items-center'
+              ? 'bg-transparent w-full -mt-20  h-screen grid place-items-center'
               : 'hidden'
           }
         >
@@ -70,8 +75,8 @@ const {show, setShow} = useGlobalContext()
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={() => setShow(false)} to='/inventory'>
-                inventory
+              <NavLink onClick={() => setShow(false)} to='/about-us'>
+                About Us
               </NavLink>
             </li>
             <li>
@@ -80,8 +85,13 @@ const {show, setShow} = useGlobalContext()
               </NavLink>
             </li>
             <li>
+              <NavLink onClick={() => setShow(false)} to='/testimonials'>
+                Testimonials
+              </NavLink>
+            </li>
+            <li>
               <NavLink onClick={() => setShow(false)} to='contact'>
-                contact
+                contact us
               </NavLink>
             </li>
           </ul>

@@ -13,7 +13,7 @@ const Contact = () => {
               data-aos=''
               src={img}
               alt=''
-              className='md:w-60 w-44 opacity-50 object-contain absolute left-0 -top-40 h-full'
+              className='md:w-60 sm:w-44 w-28 opacity-50 object-contain absolute left-0 -top-40 h-full'
             />
             <h1
               data-aos='fade-up'
@@ -34,12 +34,16 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className='bg-gray-500/70 h-40 grid place-items-center'>
+      <div className='bg-black/80 bg-[url(https://c4.wallpaperflare.com/wallpaper/404/19/616/dark-car-vehicle-ford-wallpaper-preview.jpg)] bg-no-repeat bg-cover  object-cover bg-blend-overlay bg-center h-40 grid place-items-center'>
         <div className='lg:flex grid gap-y-4 gap-x-10 items-center'>
-          <p className='text-4xl text-white font-bold'>
+          <p
+            data-aos='fade-right'
+            className='md:text-4xl text-xl text-white font-bold'
+          >
             Book a car by getting in touch with us
           </p>
-          <span className='text-blue-500 font-bold text-4xl items-center flex gap-3'>
+          
+          <span data-aos='fade-left' className='text-blue-500 font-bold md:text-4xl text-xl justify-center items-center flex gap-3'>
             <FaPhone />
             +44 012 34 5678
           </span>

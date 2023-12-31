@@ -11,7 +11,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className='max-w-md bg-black/50 backdrop-blur-xs rounded-xl p-10 mx-auto'
+      className='sm:max-w-md sm:bg-black/50 md:backdrop-blur-xs rounded-xl p-10 mx-auto'
     >
       <div>
         <h1 data-aos='fade-up' className='text-center mb-4 text-white'>
@@ -20,10 +20,7 @@ const ContactForm = () => {
         </h1>
       </div>
       <div className='mb-4'>
-        <label
-          htmlFor='name'
-          className='block text-sm font-medium text-white'
-        >
+        <label htmlFor='name' className='block text-sm font-medium text-white'>
           Your Name
         </label>
         <input
@@ -36,10 +33,7 @@ const ContactForm = () => {
         />
       </div>
       <div className='mb-4'>
-        <label
-          htmlFor='email'
-          className='block text-sm font-medium text-white'
-        >
+        <label htmlFor='email' className='block text-sm font-medium text-white'>
           Your Email
         </label>
         <input
@@ -63,7 +57,8 @@ const ContactForm = () => {
           name='message'
           placeholder='Send me a message...'
           rows='4'
-          className='mt-1 p-2 w-full border rounded-md'
+          cols='50'
+          className='mt-1 resize-none p-2 w-full border rounded-md'
           required
         ></textarea>
       </div>
@@ -71,7 +66,7 @@ const ContactForm = () => {
         type='submit'
         className='bg-blue-400 border border-blue-400 w-full text-white py-2 px-4 rounded-md hover:bg-white font-semibold duration-500 flex items-center justify-center gap-2 hover:text-blue-400'
       >
-      <HiOutlineMailOpen className='text-2xl' /> Send Message
+        <HiOutlineMailOpen className='text-2xl' /> Send Message
       </button>
     </form>
   )
