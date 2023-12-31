@@ -59,7 +59,7 @@ const {show, setShow} = useGlobalContext()
         <div
           className={
             show
-              ? 'bg-transparent w-full  h-screen grid place-items-center'
+              ? 'bg-transparent w-full -mt-20  h-screen grid place-items-center'
               : 'hidden'
           }
         >
