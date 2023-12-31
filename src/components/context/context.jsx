@@ -4,6 +4,8 @@ import 'aos/dist/aos.css'
 const AppContext = createContext()
 export const AppProvider = ({ children }) => {
   const [show, setShow] = useState(false)
+  const [open, setOpen] = useState(false)
+
 
   useEffect(() => {
     document.body.style.overflowY = show ? 'hidden' : 'visible'
@@ -19,7 +21,7 @@ export const AppProvider = ({ children }) => {
     window.addEventListener('resize', handleChange)
   }, [show])
   return (
-    <AppContext.Provider value={{ show, setShow }}>
+    <AppContext.Provider value={{ show, setShow, open, setOpen }}>
       {children}
     </AppContext.Provider>
   )

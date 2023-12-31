@@ -1,9 +1,9 @@
-import { useState } from 'react'
 import { FaRegPlayCircle } from 'react-icons/fa'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Modal from '@mui/material/Modal'
 import { NavLink } from 'react-router-dom'
+import { useGlobalContext } from '../../context/context'
 
 const style = {
   position: 'absolute',
@@ -14,7 +14,7 @@ const style = {
   height: '70%',
 }
 const hero = () => {
-  const [open, setOpen] = useState(false)
+  const { open, setOpen } = useGlobalContext()
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
 
