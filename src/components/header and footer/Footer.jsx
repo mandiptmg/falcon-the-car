@@ -1,7 +1,7 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa6'
 const Footer = () => {
   return (
-    <div className='before:bg-sky-100 relative before:absolute before:-z-10 before:bottom-0 before:w-full before:h-full before:left-0 py-20'>
+    <div className='before:bg-sky-200 relative before:absolute before:-z-10 before:bottom-0 before:w-full before:h-full before:left-0 py-20'>
       <div className='mx-auto w-[90vw] md:w-[80vw] '>
         <div
           data-aos='fade-up'

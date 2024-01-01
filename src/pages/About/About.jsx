@@ -1,5 +1,18 @@
-import { NavLink } from "react-router-dom"
-import {FaChevronRight} from 'react-icons/fa'
+import { NavLink } from 'react-router-dom'
+import { FaChevronRight } from 'react-icons/fa'
+import NumberCounter from './NumberCounter'
+import img from '../../assets/about/man.png'
+import img1 from '../../assets/about/team.png'
+import img2 from '../../assets/about/clean-car.png'
+
+
+ const numbers = [
+   { value: 412, label: 'Expertise', img:img1 },
+   { value: 7800, label: 'Happy Customer', img:img },
+   { value: 8500, label: 'Car Rent', img:img2 },
+ ]
+ import History from './History'
+
 const About = () => {
   return (
     <div>
@@ -9,9 +22,59 @@ const About = () => {
         </h1>
 
         <h1 className='capitalize flex border-t w-full absolute bottom-4 pt-4 left-auto justify-center items-center gap-2 text-xl font-bold text-white'>
-          <NavLink to='/'>home</NavLink> <FaChevronRight className="text-blue-500" />
+          <NavLink to='/'>home</NavLink>{' '}
+          <FaChevronRight className='text-blue-500' />
           <span>about us</span>
         </h1>
+      </div>
+      <div className='bg-gradient-to-r from-blue-500 to-slate-800'>
+        <div className='w-[90vw] md:w-[80vw] mx-auto py-10 '>
+          <div className='grid space-y-4 place-items-center items-start lg:grid-cols-2'>
+            <div className='p-4'>
+              <img
+                src='https://img.freepik.com/free-photo/person-using-ai-tool-job_23-2150711486.jpg?w=826&t=st=1704089993~exp=1704090593~hmac=15a3dadf822808a17ed6eee98b1779d717b9c7b1aae20ca72268f9cb476f9979'
+                alt='manufacture car'
+                className='lg:max-w-[415px] md:h-[450px]  object-cover rounded-xl'
+              />
+            </div>
+            <div className='w-full'>
+              <h1 className='uppercase text-base font-semibold  text-blue-400'>
+                about company
+              </h1>
+              <div className='space-y-4'>
+                <p className='text-white font-semibold  text-2xl capitalize '>
+                  A New Way To rent Car Safely
+                </p>
+                <p className='text-white/50'>
+                  Embark on a journey with Falcon Car Rent, where every mile is
+                  a chapter in your story of adventure. Picture yourself behind
+                  the wheel of our sleek, high-performance vehicles, navigating
+                  scenic landscapes and urban landscapes alike. Whether it's a
+                  spontaneous road trip or a carefully planned escape, our fleet
+                  becomes the canvas for your travel tale. Feel the power of the
+                  falcon as you soar through highways and byways, creating
+                  memories that linger long after the engine is turned off.
+                  Falcon Car Rent is not just about transportation; it's about
+                  turning the ordinary into extraordinary. Let your story unfold
+                  on the road with us.
+                </p>
+                <section className='flex items-start justify-around'>
+                  {numbers.map((number, index) => (
+                    <NumberCounter
+                      key={index}
+                      value={number.value}
+                      label={number.label}
+                      img={number.img}
+                    />
+                  ))}
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <History/>
       </div>
     </div>
   )
