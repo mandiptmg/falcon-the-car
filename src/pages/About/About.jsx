@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { FaChevronRight } from 'react-icons/fa'
+import { FaChevronRight, FaPhone } from 'react-icons/fa'
 import NumberCounter from './NumberCounter'
 import img from '../../assets/about/man.png'
 import img1 from '../../assets/about/team.png'
@@ -12,6 +12,7 @@ import img2 from '../../assets/about/clean-car.png'
    { value: 8500, label: 'Car Rent', img:img2 },
  ]
  import History from './History'
+import OurTeam from './OurTeam'
 
 const About = () => {
   return (
@@ -74,7 +75,28 @@ const About = () => {
         </div>
       </div>
       <div>
-        <History/>
+        <History />
+      </div>
+      <div>
+        <OurTeam />
+      </div>
+      <div className='bg-black/80 bg-[url(https://c4.wallpaperflare.com/wallpaper/404/19/616/dark-car-vehicle-ford-wallpaper-preview.jpg)] bg-no-repeat bg-cover  object-cover bg-blend-overlay bg-center h-40 grid place-items-center'>
+        <div className='lg:flex grid gap-y-4 gap-x-10 items-center'>
+          <p
+            data-aos='fade-right'
+            className='md:text-4xl text-xl text-white font-bold'
+          >
+            Book a car by getting in touch with us
+          </p>
+
+          <span
+            data-aos='fade-left'
+            className='text-blue-500 font-bold md:text-4xl text-xl justify-center items-center flex gap-3'
+          >
+            <FaPhone />
+            +44 012 34 5678
+          </span>
+        </div>
       </div>
     </div>
   )

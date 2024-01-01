@@ -3,7 +3,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
-import {FaPhone} from 'react-icons/fa'
+import { FaPhone } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 
 const data = [
@@ -25,20 +25,20 @@ const data = [
 ]
 
 const Testimonials = () => {
-    const [isNavigationEnabled, setNavigationEnabled] = useState(true);
+  const [isNavigationEnabled, setNavigationEnabled] = useState(true)
 
   useEffect(() => {
     const handleResize = () => {
-       const windowWidth = window.innerWidth
-       setNavigationEnabled(windowWidth >= 600)
-    };
+      const windowWidth = window.innerWidth
+      setNavigationEnabled(windowWidth >= 600)
+    }
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
   return (
     <div className='bg-blue-100'>
       <div data-aos='fade-up' className=' w-[90vw] mx-auto  space-y-4 py-20'>
