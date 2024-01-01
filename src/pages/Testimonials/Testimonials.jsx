@@ -4,6 +4,7 @@ import 'swiper/css/pagination'
 import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import {FaPhone} from 'react-icons/fa'
+import { useEffect, useState } from 'react'
 
 const data = [
   {
@@ -24,6 +25,20 @@ const data = [
 ]
 
 const Testimonials = () => {
+    const [isNavigationEnabled, setNavigationEnabled] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+       const windowWidth = window.innerWidth
+       setNavigationEnabled(windowWidth >= 600)
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <div className='bg-blue-100'>
       <div data-aos='fade-up' className=' w-[90vw] mx-auto  space-y-4 py-20'>
@@ -31,8 +46,11 @@ const Testimonials = () => {
           what people say
           <br /> about us?
         </h1>
-       
-        <p  data-aos='fade-right' className='max-w-xl text-sm md:text-base  text-gray-400 mx-auto text-center'>
+
+        <p
+          data-aos='fade-right'
+          className='max-w-xl text-sm md:text-base  text-gray-400 mx-auto text-center'
+        >
           Discover the positive impact we've made on the our clients by reading
           through their testimonials. Our clients have experienced our service
           and results, and they're eager to share their positive experiences
@@ -41,7 +59,7 @@ const Testimonials = () => {
         <div className='bg-white max-w-2xl mx-auto'>
           <Swiper
             slidesPerView={1}
-            navigation={true}
+            navigation={isNavigationEnabled}
             pagination={{
               clickable: true,
             }}
