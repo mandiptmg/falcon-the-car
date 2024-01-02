@@ -14,10 +14,11 @@ const Home = () => {
         <Detail />
 </div>
         <Dealer />
-        <div className='md:w-[80vw] mx-auto max-w-7xl w-[90vw]'></div>
+        <div className='md:w-[80vw] mx-auto max-w-7xl w-[90vw]'>
         <Choose />
       
       <Team />
+          </div>
     </>
   )
 }
