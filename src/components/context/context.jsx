@@ -13,7 +13,7 @@ export const AppProvider = ({ children }) => {
     //AOS INIT
     Aos.init({ duration: 1500 })
     const handleChange = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setShow(false)
       }
     }

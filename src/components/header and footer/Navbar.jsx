@@ -20,7 +20,7 @@ const {show, setShow} = useGlobalContext()
               </button>
             </NavLink>
           </div>
-          <div className='hidden md:block'>
+          <div className='hidden lg:block'>
             <ul className='uppercase text-sm font-medium flex items-center gap-4'>
               <li className='drop-shadow-lg'>
                 <NavLink activeClassName='text-orange-400' to='/'>
@@ -33,8 +33,8 @@ const {show, setShow} = useGlobalContext()
                 </NavLink>
               </li>
               <li className='drop-shadow-lg'>
-                <NavLink activeClassName='text-orange-400' to='/shop'>
-                  shop
+                <NavLink activeClassName='text-orange-400' to='/vehical-modal'>
+                  vehical modal
                 </NavLink>
               </li>
               <li className='drop-shadow-lg'>
@@ -55,7 +55,7 @@ const {show, setShow} = useGlobalContext()
             </button>
             <button
               onClick={() => setShow(!show)}
-              className='text-xl md:hidden  text-sky-400'
+              className='text-xl lg:hidden  text-sky-400'
             >
               {show ? <FaTimes /> : <FaBars />}
             </button>
@@ -80,8 +80,8 @@ const {show, setShow} = useGlobalContext()
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={() => setShow(false)} to='/shop'>
-                shop
+              <NavLink onClick={() => setShow(false)} to='/vehical-modal'>
+                vehical modal
               </NavLink>
             </li>
             <li>

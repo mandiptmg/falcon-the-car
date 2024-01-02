@@ -1,4 +1,5 @@
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
+// import {FaFacebook,FaTwitter,FaLinkedin} from 'react-icons/fa'
 
 const OurTeam = () => {
   return (
@@ -17,12 +18,15 @@ const OurTeam = () => {
         </div>
         <div className='sm:flex grid place-items-center justify-center text-white items-center gap-7'>
           <div className='bg-blue-500'>
-            <div>
+            <div className='relative overflow-hidden w-full h-full '>
               <img
                 src='https://demo.moxcreative.com/autokit/wp-content/uploads/sites/41/2021/06/young-asian-businesswoman-hold-with-notebook-computer-e1623128181638.jpg'
                 alt=''
                 className='sm:w-[300px] sm:h-[300px] object-cover'
-              />
+              />  {/* <FaFacebook />
+                  <FaTwitter />
+                  <FaLinkedin /> */}
+              
             </div>
             <div className='p-4'>
               <h1 className='text-xl '>Mae C Saunders </h1>

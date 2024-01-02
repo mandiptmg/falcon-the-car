@@ -3,7 +3,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
-import { FaPhone } from 'react-icons/fa'
+import { FaPhone, FaStar } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 
 const data = [
@@ -80,12 +80,19 @@ const Testimonials = () => {
                     </div>{' '}
                     <div className='space-y-4 p-5'>
                       <h1 className='font-[roboto] text-4xl capitalize font-semibold'>
-                        {name}
-                      </h1>
-                      <hr />
-                      <h1 className='text-base uppercase my-4 font- tracking-[.2rem] text-gray-400'>
+                          {name}
+                        </h1>
+                   
+                      <hr /> 
+                       <div className='flex items-center justify-between'>
+                         <h1 className='text-base uppercase my-4 font- tracking-[.2rem] text-gray-400'>
                         {title}
                       </h1>
+                        <h1 className='flex items-center p-2 bg-gradient-to-r from-sky-400 to-blue-500 rounded-xl text-white font-bold  gap-1'>
+                          5.0 <FaStar />
+                        </h1>
+                      
+                      </div>
                       <p className='text-base text-gray-500 font-medium '>
                         " Lorem ipsum dolor sit amet consectetur adipisicing
                         elit. Veritatis, consectetur! Amet maiores nam, nisi
