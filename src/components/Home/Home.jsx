@@ -14,20 +14,11 @@ const Home = () => {
         <Detail />
 </div>
         <Dealer />
-<<<<<<< HEAD
       
         <Choose />
       
       <Team />
     </main>
-=======
-        <div className='md:w-[80vw] mx-auto max-w-7xl w-[90vw]'>
-        <Choose />
-      
-      <Team />
-          </div>
-    </>
->>>>>>> ac424159a56949f076df4fab1b63e9b9dc1bc8e9
   )
 }
 
