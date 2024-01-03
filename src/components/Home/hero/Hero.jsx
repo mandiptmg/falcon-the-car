@@ -24,7 +24,7 @@ const hero = () => {
 
    useEffect(() => {
      const handleResize = () => {
-       const isMobile = window.innerWidth <= 800
+       const isMobile = window.innerWidth <= 768
        setStyle({
          ...style,
          width: isMobile ? '100%' : '70%',

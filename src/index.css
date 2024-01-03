@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar{
- width: 1px;
-}
 /* Make the scrollbar track transparent */
 ::-webkit-scrollbar{
   width: .5rem;
