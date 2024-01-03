@@ -5,9 +5,12 @@ import gas from '../../../assets/car/gas-pump.png'
 import handle from '../../../assets/car/steering-wheel.png'
 import people from '../../../assets/car/employees.png'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
+import Brand from '../../../pages/About/Brand'
+
 const Dealer = () => {
+
   return (
-    <div className='py-20 bg-[url(https://img.freepik.com/free-vector/blue-shade-watercolor-texture-background_1017-19546.jpg?w=740&t=st=1704212948~exp=1704213548~hmac=ac9090676ef1ce034240644f6750c73a8f88df691f1c2e6816e4e64efa4469a5)] bg-cover bg-center bg-no-repeat bg-white/50 bg-blend-overlay mb-40'>
+    <div className='pt-20 bg-[url(https://img.freepik.com/free-vector/blue-shade-watercolor-texture-background_1017-19546.jpg?w=740&t=st=1704212948~exp=1704213548~hmac=ac9090676ef1ce034240644f6750c73a8f88df691f1c2e6816e4e64efa4469a5)] bg-cover bg-center bg-no-repeat bg-white/50 bg-blend-overlay mb-40'>
       <div className='md:w-[80vw] mx-auto w-[90vw]'>
         <div className=' grid place-content-center '>
           <div className='max-w-md'>
@@ -100,6 +103,9 @@ const Dealer = () => {
             })
             .slice(0, 3)}
         </div>
+      </div>
+      <div className='mt-7'>
+        <Brand/>
       </div>
     </div>
   )

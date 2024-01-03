@@ -1,5 +1,12 @@
+import { FaArrowAltCircleUp } from 'react-icons/fa'
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa6'
+import { NavLink } from 'react-router-dom'
+import logo from '../../assets/icon.png'
 const Footer = () => {
+  
+  const upScroll=()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   return (
     <div className='before:bg-sky-200 relative before:absolute before:-z-10 before:bottom-0 before:w-full before:h-full before:left-0 py-20'>
       <div className='mx-auto w-[90vw] md:w-[80vw] '>
@@ -12,7 +19,9 @@ const Footer = () => {
 
             <ul className='mt-4 grid gap-2'>
               <li className='font-bold text-lg   '>
-                <a href='#home'>Falcon</a>
+                <NavLink to='/' className=' flex items-center gap-1'>
+                  <img src={logo} alt='logo' className='w-6' /> Falcon
+                </NavLink>
               </li>
               <li>
                 <h1 className='text-sm text-gray-400'>falcon.car@email.com</h1>
@@ -45,36 +54,53 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h1 className=' font-bold '>About US</h1>
+            <h1 className=' font-bold '>Page Link</h1>
             <ul className='mt-4 capitalize  grid gap-2 text-sm text-gray-400'>
-              <li>
-                <h1>referral program</h1>
+              <li className='drop-shadow-lg'>
+                <NavLink activeClassName='text-orange-400' to='/about-us'>
+                  About Us
+                </NavLink>
               </li>
-              <li>
-                <h1>commercial </h1>
-              </li>{' '}
-              <li>
-                <h1>careers</h1>
-              </li>{' '}
-              <li>
-                <h1>products</h1>
+              <li className='drop-shadow-lg'>
+                <NavLink activeClassName='text-orange-400' to='/vehical-model'>
+                  vehical models
+                </NavLink>
+              </li>
+              <li className='drop-shadow-lg'>
+                <NavLink activeClassName='text-orange-400' to='/testimonials'>
+                  Testimonials
+                </NavLink>
+              </li>
+              <li className='drop-shadow-lg'>
+                <NavLink activeClassName='text-orange-400' to='/contact'>
+                  contact us
+                </NavLink>
               </li>
             </ul>
           </div>
           <div>
-            <h1 className=' font-bold '>Blog</h1>
-            <ul className='mt-4 grid gap-2  text-sm text-gray-400'>
+            <h1 className='font-bold'>NewsLetter</h1>
+            <ul className='space-y-4 mt-4'>
               <li>
-                <h1>Why falcon?</h1>
+                <p className='text-gray-400'>
+                  Sign up for our newsletter to get updated information, promo,
+                  and insight about automotive.
+                </p>
               </li>
               <li>
-                <h1>why we best? </h1>
-              </li>{' '}
-              <li>
-                <h1>Relationship</h1>
-              </li>{' '}
-              <li>
-                <h1>Legal & Privacy</h1>
+                <form className='space-y-2' action=''>
+                  <input
+                    className='w-full p-2 outline-blue-400 rounded bg-blue-100'
+                    placeholder='Enter your email address'
+                    type='email'
+                  />
+                  <button
+                    type='submit'
+                    className='text-lg text-white capitalize w-full rounded-lg p-1 bg-gradient-to-r from-sky-500 to-blue-400 '
+                  >
+                    sign up
+                  </button>
+                </form>
               </li>
             </ul>
           </div>
@@ -105,7 +131,10 @@ const Footer = () => {
           </ul>
           <div className='mt-4 text-sm text-gray-700'>
             All rights reserved by &copy; Mandip creative 2023
-          </div>
+          </div>{' '}
+          <button onClick={upScroll} className='absolute bottom-2 right-4'>
+            <FaArrowAltCircleUp className='text-3xl animate-bounce text-sky-500' />
+          </button>
         </div>
       </div>
     </div>

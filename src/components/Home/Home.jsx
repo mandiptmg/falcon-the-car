@@ -4,7 +4,6 @@ import Dealer from './car dealer/Dealer'
 import Choose from './car dealer/Choose'
 import Team from './our team/Team'
 import Work from './hero/Work'
-
 const Home = () => {
   return (
     <main>

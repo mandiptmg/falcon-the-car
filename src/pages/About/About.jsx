@@ -13,6 +13,7 @@ import img2 from '../../assets/about/clean-car.png'
  ]
  import History from './History'
 import OurTeam from './OurTeam'
+import Brand from './Brand'
 
 const About = () => {
   return (
@@ -79,6 +80,9 @@ const About = () => {
       </div>
       <div>
         <OurTeam />
+      </div>
+      <div>
+        <Brand/>
       </div>
       <div className='bg-black/80 bg-[url(https://c4.wallpaperflare.com/wallpaper/404/19/616/dark-car-vehicle-ford-wallpaper-preview.jpg)] bg-no-repeat bg-cover  object-cover bg-blend-overlay bg-center h-40 grid place-items-center'>
         <div className='lg:flex grid gap-y-4 gap-x-10 items-center'>
