@@ -7,18 +7,18 @@ import Work from './hero/Work'
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Hero />
-      <div className='md:w-[80vw] mx-auto max-w-7xl w-[90vw]'>
+      <div className='md:w-[80vw] mx-auto w-[90vw]'>
         <Work/>
         <Detail />
 </div>
         <Dealer />
-        <div className='md:w-[80vw] mx-auto max-w-7xl w-[90vw]'></div>
+      
         <Choose />
       
       <Team />
-    </>
+    </main>
   )
 }
 

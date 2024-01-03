@@ -39,7 +39,7 @@ const data = [
 ]
 const Choose = () => {
   return (
-    <div className='py-20'>
+    <div className=' md:w-[80vw] mx-auto max-w-7xl w-[90vw]'>
       <div className=' grid place-content-left'>
         <div className='max-w-md'>
           <h6
@@ -57,23 +57,20 @@ const Choose = () => {
         </div>
       </div>
       <div className='grid md:grid-cols-3 grid-cols-2 md:gap-x-14 items-center'>
-{data.map((item, index) => {
-              const { title, img, desc } = item
-              return (
-                <article data-aos='fade-up' className='p-4 max-w-xs' key={index}>
-                  <img
-                    src={img}
-                    alt={title}
-                    className='w-14 p-2 bg-gray-200'
-                  />
-                  <div>
-                    <h1 className=' my-2 text-lg font-semibold capitalize'>
-                      {title}
-                    </h1>
-                    <p className='text-sm text-gray-500'>{desc}</p>
-                  </div>
-                </article>
-                )})}
+        {data.map((item, index) => {
+          const { title, img, desc } = item
+          return (
+            <article data-aos='fade-up' className='p-4 max-w-xs' key={index}>
+              <img src={img} alt={title} className='w-14 p-2 bg-gray-200' />
+              <div>
+                <h1 className=' my-2 text-lg font-semibold capitalize'>
+                  {title}
+                </h1>
+                <p className='text-sm text-gray-500'>{desc}</p>
+              </div>
+            </article>
+          )
+        })}
       </div>
     </div>
   )

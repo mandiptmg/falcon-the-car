@@ -18,7 +18,7 @@ const Team = () => {
           data-aos='fade-right'
           className='text-left text-xl font-semibold md:text-2xl '
         >
-          Our Team
+          Our <span className='text-blue-500'>Team</span>
         </h1>
         <div className='grid md:grid-cols-3 items-center gap-4 mt-7 '>
           {data.map((item, index) => {

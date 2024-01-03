@@ -33,8 +33,8 @@ const {show, setShow} = useGlobalContext()
                 </NavLink>
               </li>
               <li className='drop-shadow-lg'>
-                <NavLink activeClassName='text-orange-400' to='/vehical-modal'>
-                  vehical modal
+                <NavLink activeClassName='text-orange-400' to='/vehical-model'>
+                  vehical models
                 </NavLink>
               </li>
               <li className='drop-shadow-lg'>
@@ -80,8 +80,8 @@ const {show, setShow} = useGlobalContext()
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={() => setShow(false)} to='/vehical-modal'>
-                vehical modal
+              <NavLink onClick={() => setShow(false)} to='/vehical-model'>
+                vehical models
               </NavLink>
             </li>
             <li>

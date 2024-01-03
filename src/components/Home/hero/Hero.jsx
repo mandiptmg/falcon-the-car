@@ -4,23 +4,45 @@ import Button from '@mui/material/Button'
 import Modal from '@mui/material/Modal'
 import { NavLink } from 'react-router-dom'
 import { useGlobalContext } from '../../context/context'
+import { useState,useEffect } from 'react'
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: '70%',
-  height: '70%',
-}
 const hero = () => {
   const { open, setOpen } = useGlobalContext()
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
 
+   const [style, setStyle] = useState({
+     position: 'absolute',
+     top: '50%',
+     left: '50%',
+     transform: 'translate(-50%, -50%)',
+     width: '70%',
+     height: '70%',
+     maxWidth: '100%',
+     maxHeight: '100%',
+   })
+
+   useEffect(() => {
+     const handleResize = () => {
+       const isMobile = window.innerWidth <= 800
+       setStyle({
+         ...style,
+         width: isMobile ? '100%' : '70%',
+         height: isMobile ? '50%' : '70%',
+       })
+     }
+
+     handleResize() // Initial call to set styles based on current width
+
+     window.addEventListener('resize', handleResize)
+
+     return () => {
+       window.removeEventListener('resize', handleResize)
+     }
+   }, [style])
   return (
-    <div className=' bg-gradient-to-l from-transparent -mt-20 h-screen via-transparent to-black/60 before:absolute before:top-0 before:left-0 before:-z-10   before:bg-[url(https://c4.wallpaperflare.com/wallpaper/814/151/716/car-sports-car-supercars-aston-martin-wallpaper-preview.jpg)] before:bg-cover before:bg-no-repeat before:bg-center   before:w-full before:h-[100vh]'>
-      <div id='home' className='md:pt-20 pt-28 mx-auto max-w-7xl w-[90vw]'>
+    <div className=' bg-gradient-to-l from-transparent -mt-20 h-screen via-transparent to-black/60 before:absolute before:top-0 before:left-0 before:-z-10   before:bg-[url(https://c4.wallpaperflare.com/wallpaper/814/151/716/car-sports-car-supercars-aston-martin-wallpaper-preview.jpg)] before:bg-cover before:bg-no-repeat before:bg-center   before:w-full before:h-screen'>
+      <div id='home' className='md:pt-20 pt-28 mx-auto w-[90vw]'>
         <div className='grid pt-10 md:pt-36 items-center lg:grid-cols-[1fr,1.7fr]'>
           <div data='fade-right' className='h-full '>
             <button className='text-sm font-semibold uppercase text-blue-400'>
@@ -37,7 +59,7 @@ const hero = () => {
             </div>
             <div className='flex mt-6 items-center gap-4'>
               <button className='text-base hover:bg-gray-400  font-semibold capitalize px-3 py-2  bg-black/90 text-white'>
-                <NavLink to='/shop'>shop now</NavLink>
+                <NavLink to='/vehical-model'>shop now</NavLink>
               </button>
               <Button
                 onClick={handleOpen}

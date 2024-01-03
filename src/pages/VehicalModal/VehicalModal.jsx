@@ -13,7 +13,7 @@ const VehicalModal = () => {
         <h1 className='capitalize flex border-t w-full absolute bottom-4 pt-4 left-auto justify-center items-center gap-2 text-xl font-bold text-white'>
           <NavLink to='/'>home</NavLink>{' '}
           <FaChevronRight className='text-blue-500' />
-          <span>vehical modal</span>
+          <span>vehical models</span>
         </h1>
       </div>
     </div>
