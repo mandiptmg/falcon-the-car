@@ -1,8 +1,11 @@
 import img from '../../../assets/icons/time.png'
 import img1 from '../../../assets/icons/car.png'
 import img2 from '../../../assets/icons/location.png'
+import { useGlobalContext } from '../../context/context'
 
 const Work = () => {
+  const { setModalOpen } = useGlobalContext()
+  const handleOpen = () => setModalOpen(true)
   return (
     <div className='text-center py-16 space-y-7'>
       <h1 className='font-bold capitalize text-black/80 text-4xl'>
@@ -57,7 +60,11 @@ const Work = () => {
           </p>
         </div>
       </div>
-      <button className='text-lg text-white p-2 bg-gradient-to-r from-sky-400 to-blue-500   font-semibold capitalize hover:scale-105 duration-500 shadow-lg rounded-xl '>
+
+      <button
+        onClick={handleOpen}
+        className='text-lg text-white p-2 bg-gradient-to-r from-sky-400 to-blue-500   font-semibold capitalize hover:scale-105 duration-500 shadow-lg rounded-xl '
+      >
         start booking
       </button>
     </div>

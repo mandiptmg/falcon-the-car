@@ -8,6 +8,7 @@ import About from './pages/About/About'
 import VehicalModal from './pages/VehicalModal/VehicalModal'
 import { useEffect } from 'react'
 import NoPage from './pages/NoPage/NoPage'
+import Modal from './pages/Modal/Modal'
 const App = () => {
   const { pathname } = useLocation()
   useEffect(() => {
@@ -22,9 +23,12 @@ const App = () => {
         <Route path='/vehical-model' element={<VehicalModal />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/testimonials' element={<Testimonials />} />
-        <Route path='*' element={<NoPage/>} />
+        <Route path='*' element={<NoPage />} />
       </Routes>
       <Footer />
+      <div>
+        <Modal />
+      </div>
     </div>
   )
 }
