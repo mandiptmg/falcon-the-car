@@ -54,10 +54,11 @@ function ChildModal({ handleModalClose, isSearchDisabled }) {
       </Button>
       <Modal
         open={open}
+        className='grid overflow-y-auto h-screen py-10 place-items-center'
         aria-labelledby='child-modal-title'
         aria-describedby='child-modal-description'
       >
-        <Box className='absolute top-1/2 left-1/2 transform backdrop-blur-sm  -translate-x-1/2 -translate-y-1/2 w-[100vw] sm:max-w-3xl mx-auto text-white rounded-3xl border border-sky-200 shadow-3xl p-4'>
+        <Box className=' w-[90vw] sm:max-w-3xl mx-auto text-white rounded-3xl border backdrop-blur-sm border-sky-200 sm:shadow-3xl p-4'>
           <div className='absolute top-4  right-4 '>
             <button
               onClick={() => {
@@ -71,11 +72,11 @@ function ChildModal({ handleModalClose, isSearchDisabled }) {
           </div>
           <h2
             id='child-modal-title'
-            className='text-center font-bold text-4xl capitalize text-sky-400'
+            className='text-center font-bold text-2xl py-4 sm:text-4xl capitalize text-sky-400'
           >
             Personal information
           </h2>
-
+<hr className='my-2' />
           <form onSubmit={handleSubmit}>
             <div className='grid gap-4 items-start  sm:grid-cols-2'>
               <div className='grid'>
@@ -208,8 +209,8 @@ function ChildModal({ handleModalClose, isSearchDisabled }) {
                 </span>
               </div>
             </div>
-            <div>
-              <label className='flex gap-x-2 items-center font-semibold'>
+            <div className='my-4'>
+              <label className='flex text-gray-200 text-base gap-x-2 items-center font-semibold'>
                 <input
                   type='checkbox'
                   name='subscribeToUpdates'
@@ -221,7 +222,7 @@ function ChildModal({ handleModalClose, isSearchDisabled }) {
             </div>
             <hr className='my-4' />
             <button
-              className='text-center w-full bg-gradient-to-r to-blue-400 hover:scale-105 duration-500 from-sky-500  p-2 rounded-lg font-semibold  '
+              className='text-center w-full bg-gradient-to-r to-blue-400 hover:scale-[1.01] duration-500 from-sky-500  p-2 rounded-lg font-semibold  '
               type='submit'
             >
               Reserve Now
@@ -285,12 +286,12 @@ export default function NestedModal() {
       <Modal
         open={modalOpen}
         onClose={handleClose}
-        className='grid h-screen  place-items-start sm:place-items-center overflow-auto'
+        className='grid overflow-y-auto h-screen place-items-center'
         aria-labelledby='parent-modal-title'
         aria-describedby='parent-modal-description'
       >
         <Box
-          className={` ${hidden}  w-[90vw] overflow-auto sm:max-w-3xl mx-auto bg-black/50 text-white border rounded-xl backdrop-blur-sm outline-sky-200 relative  shadow-2xl p-4`}
+          className={` ${hidden} w-[90vw] sm:max-w-3xl mx-auto bg-black/50 text-white sm:border rounded-xl backdrop-blur-sm outline-sky-200   sm:shadow-2xl p-4`}
         >
           <h2
             id='parent-modal-title'
@@ -302,7 +303,6 @@ export default function NestedModal() {
             <button
               onClick={() => {
                 handleClose()
-               
               }}
               className='bg-red-500 hover:scale-105 duration-500 text-white  p-1 rounded outline-sky-200 '
             >
