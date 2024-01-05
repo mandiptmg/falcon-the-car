@@ -25,10 +25,16 @@ const VehicalModal = () => {
       </div>
       <div className='py-10'>
         <div className='text-center space-y-4'>
-          <h1 className='text-3xl md:text-4xl font-bold text-slate-800 capitalize'>
+          <h1
+            data='fade-up'
+            className='text-3xl md:text-4xl font-bold text-slate-800 capitalize'
+          >
             trending rental <span className='text-sky-500'>deals</span>
           </h1>
-          <p className='font-medium text-sm sm:text-base text-gray-400 capitalize'>
+          <p
+            data='fade-up'
+            className='font-medium text-sm sm:text-base text-gray-400 capitalize'
+          >
             most popular car rental deals
           </p>
         </div>
@@ -86,7 +92,10 @@ const VehicalModal = () => {
                       </h1>
                     </div>
                   </div>
-                  <button onClick={()=>setChildModal1(true)} className='rounded bg-gradient-to-r to-blue-400 text-white font-bold capitalize hover:scale-105 duration-500 from-sky-500  p-2'>
+                  <button
+                    onClick={() => setChildModal1(true)}
+                    className='rounded bg-gradient-to-r to-blue-400 text-white font-bold capitalize hover:scale-105 duration-500 from-sky-500  p-2'
+                  >
                     rent now
                   </button>
                 </div>

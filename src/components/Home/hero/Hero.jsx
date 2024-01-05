@@ -43,7 +43,10 @@ const hero = () => {
   return (
     <div className=' bg-gradient-to-l from-transparent -mt-20 h-screen via-transparent to-black/60 before:absolute before:top-0 before:left-0 before:-z-10   before:bg-[url(https://c4.wallpaperflare.com/wallpaper/814/151/716/car-sports-car-supercars-aston-martin-wallpaper-preview.jpg)] before:bg-cover before:bg-no-repeat before:bg-center   before:w-full before:h-screen'>
       <div id='home' className='md:pt-20 pt-28 mx-auto w-[90vw]'>
-        <div className='grid pt-10 md:pt-36 items-center lg:grid-cols-[1fr,1.7fr]'>
+        <div
+          data='fade-up'
+          className='grid pt-10 md:pt-36 items-center lg:grid-cols-[1fr,1.7fr]'
+        >
           <div data='fade-right' className='h-full '>
             <button className='text-sm font-semibold uppercase text-blue-400'>
               <a href='#art'>art of detailing</a>

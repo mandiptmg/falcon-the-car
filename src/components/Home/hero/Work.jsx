@@ -8,14 +8,20 @@ const Work = () => {
   const handleOpen = () => setModalOpen(true)
   return (
     <div className='text-center py-16 space-y-7'>
-      <h1 className='font-bold capitalize text-black/80 text-4xl'>
+      <h1
+        data='fade-up'
+        className='font-bold capitalize text-black/80 text-4xl'
+      >
         how it <span className='text-blue-500'> works</span>
       </h1>
-      <p className='text-sm font-semibold text-gray-400 capitalize  '>
+      <p
+        data='fade-up'
+        className='text-sm font-semibold text-gray-400 capitalize  '
+      >
         rent with following 3 working steps
       </p>
-      <div className='grid py-10 gap-7 sm:grid-cols-3 place-items-center'>
-        <div className='grid space-y-4 text-center place-items-center'>
+        <div  data='fade-up' className='grid space-y-4 text-center place-items-center'>
+      <div  className='grid py-10 gap-7 sm:grid-cols-3 place-items-center'>
           <img
             src={img2}
             alt='location'
@@ -62,6 +68,7 @@ const Work = () => {
       </div>
 
       <button
+        data='fade-up'
         onClick={handleOpen}
         className='text-lg text-white p-2 bg-gradient-to-r from-sky-400 to-blue-500   font-semibold capitalize hover:scale-105 duration-500 shadow-lg rounded-xl '
       >

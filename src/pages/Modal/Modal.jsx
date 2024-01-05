@@ -162,7 +162,7 @@ function ChildModal({ handleModalClose, isSearchDisabled }) {
                 </label>
                 <span className='text-sm text-gray-300 mt-1 '>
                   {formData.age === '' && 'This field is required.'}
-                  {!ageValid && 'Age must be 18 or older.'}
+                  {!ageValid && 'Age must be 19 or older.'}
                 </span>
               </div>
 
