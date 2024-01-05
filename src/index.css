@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 /* Make the scrollbar track transparent */
+@media only screen and (min-width: 768px) {
 ::-webkit-scrollbar{
   width: .5rem;
 }
@@ -14,6 +15,7 @@
 ::-webkit-scrollbar-thumb{
   background-color:skyblue;
   border-radius: 4rem;
+}
 }
 
 /* In your custom CSS file */

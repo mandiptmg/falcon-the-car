@@ -42,7 +42,7 @@ const Dealer = () => {
               const { title, img } = item
               return (
                 <article
-                  data-aos='fade-'
+                  data-aos='fade-up'
                   className=' shadow-lg rounded-xl bg-white'
                   key={index}
                 >
