@@ -6,6 +6,10 @@ export const AppProvider = ({ children }) => {
   const [show, setShow] = useState(false)
   const [open, setOpen] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
+  const [childModal, setChildModal] = useState(false)
+  const [childModal1, setChildModal1] = useState(false)
+
+
 
   useEffect(() => {
     document.body.style.overflowY = show ? 'hidden' : 'visible'
@@ -23,7 +27,18 @@ export const AppProvider = ({ children }) => {
   }, [show])
   return (
     <AppContext.Provider
-      value={{ show, setShow, open, setOpen, modalOpen, setModalOpen }}
+      value={{
+        show,
+        setShow,
+        open,
+        setOpen,
+        modalOpen,
+        setModalOpen,
+        childModal,
+        setChildModal,
+        childModal1,
+        setChildModal1,
+      }}
     >
       {children}
     </AppContext.Provider>

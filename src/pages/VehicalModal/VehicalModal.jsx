@@ -5,8 +5,11 @@ import data from '../../Data/Data'
 import gas from '../../assets/car/gas-pump.png'
 import handle from '../../assets/car/steering-wheel.png'
 import people from '../../assets/car/employees.png'
+import { useGlobalContext } from '../../components/context/context'
 NavLink
 const VehicalModal = () => {
+  const { setChildModal1 } = useGlobalContext()
+
   return (
     <div>
       <div className='w-full relative grid place-items-center bg-black/50 bg-blend-overlay h-[50vh] bg-[url(https://c4.wallpaperflare.com/wallpaper/652/165/231/car-ford-mustang-shelby-lamborghini-wallpaper-preview.jpg)] bg-no-repeat bg-cover bg-center'>
@@ -83,7 +86,7 @@ const VehicalModal = () => {
                       </h1>
                     </div>
                   </div>
-                  <button className='rounded bg-gradient-to-r to-blue-400 text-white font-bold capitalize hover:scale-105 duration-500 from-sky-500  p-2'>
+                  <button onClick={()=>setChildModal1(true)} className='rounded bg-gradient-to-r to-blue-400 text-white font-bold capitalize hover:scale-105 duration-500 from-sky-500  p-2'>
                     rent now
                   </button>
                 </div>

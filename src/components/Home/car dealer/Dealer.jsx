@@ -6,11 +6,10 @@ import handle from '../../../assets/car/steering-wheel.png'
 import people from '../../../assets/car/employees.png'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import Brand from '../../../pages/About/Brand'
-// import { useGlobalContext } from '../../context/context'
-
+import { useGlobalContext } from '../../context/context'
 
 const Dealer = () => {
-  
+  const {setChildModal1} = useGlobalContext()
   return (
     <div id='rent' className='pt-20  bg-[url(https://img.freepik.com/free-vector/blue-shade-watercolor-texture-background_1017-19546.jpg?w=740&t=st=1704212948~exp=1704213548~hmac=ac9090676ef1ce034240644f6750c73a8f88df691f1c2e6816e4e64efa4469a5)] bg-cover bg-center bg-no-repeat bg-white/50 bg-blend-overlay mb-40'>
       <div className='md:w-[80vw] mx-auto w-[90vw]'>
@@ -97,7 +96,7 @@ const Dealer = () => {
                       </div>
                     </div>
                   
-                      <button  className='rounded mt-4 bg-gradient-to-r to-blue-400 text-white font-bold capitalize hover:scale-105 duration-500 from-sky-500  p-2'>
+                      <button onClick={()=>setChildModal1(true)}  className='rounded mt-4 bg-gradient-to-r to-blue-400 text-white font-bold capitalize hover:scale-105 duration-500 from-sky-500  p-2'>
                         rent now
                       </button>
                    

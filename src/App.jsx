@@ -9,6 +9,7 @@ import VehicalModal from './pages/VehicalModal/VehicalModal'
 import { useEffect } from 'react'
 import NoPage from './pages/NoPage/NoPage'
 import Modal from './pages/Modal/Modal'
+import ChildModal from './pages/Modal/ChildModal'
 const App = () => {
   const { pathname } = useLocation()
   useEffect(() => {
@@ -28,6 +29,7 @@ const App = () => {
       <Footer />
       <div>
         <Modal />
+        <ChildModal/>
       </div>
     </div>
   )
