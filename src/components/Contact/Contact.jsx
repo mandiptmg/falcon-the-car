@@ -1,5 +1,5 @@
 import { FaPhone } from 'react-icons/fa'
-import img from '../../assets/off.png'
+// import img from '../../assets/off.png'
 import ContactForm from './ContactForm'
 
 const Contact = () => {
@@ -8,13 +8,8 @@ const Contact = () => {
       <div className='md:w-[80vw]  mx-auto max-w-7xl w-[90vw]'>
         <div className='text-center pt-10'>
           {' '}
-          <div className=' grid items-center h-20'>
-            <img
-              data-aos=''
-              src={img}
-              alt=''
-              className='md:w-60 sm:w-44 w-28 opacity-50 object-contain absolute left-0 -top-40 h-full'
-            />
+          <div className=' grid items-center'>
+           
             <h1
               data-aos='fade-up'
               className='text-3xl text-white font-bold mb-4'
