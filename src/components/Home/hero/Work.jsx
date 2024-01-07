@@ -23,9 +23,10 @@ const Work = () => {
         </p>
         <div
           data-aos='fade-up'
-          className='grid space-y-4 text-center place-items-center'
+          className='grid py-10 gap-7 sm:grid-cols-3 place-items-center'
         >
-          <div className='grid py-10 gap-7 sm:grid-cols-3 place-items-center'>
+          
+          <div className='grid space-y-4 text-center place-items-center' >
             <img
               src={img2}
               alt='location'
