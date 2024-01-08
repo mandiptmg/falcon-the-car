@@ -51,12 +51,11 @@ const hero = () => {
               <a href='#art'>art of detailing</a>
             </button>
             <div>
-              <p className='mt-4 font-bold text-white text-3xl md:text-5xl'>
-                Welcome To Car Buying Made Simple
+              <p className='mt-4 font-bold capitalize text-white text-3xl md:text-5xl'>
+              fast and easy way to rent a car
               </p>
               <p className='mt-6 text-sm font-semibold text-gray-200'>
-                Get more value in the affordable seven-passenger Chrysler
-                Pacofoca Hybird.The exceptional and
+               Simplified car rental platform. Intuitive search, transparent pricing, and user accounts. Streamlining the rental process for a hassle-free experience.
               </p>
             </div>
             <div className='flex mt-6 items-center gap-4'>
