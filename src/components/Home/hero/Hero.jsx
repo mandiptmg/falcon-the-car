@@ -60,7 +60,7 @@ const hero = () => {
             </div>
             <div className='flex mt-6 items-center gap-4'>
               <button className='text-base hover:bg-gray-400  font-semibold capitalize px-3 py-2  bg-black/90 text-white'>
-                <NavLink to='/vehical-model'>shop now</NavLink>
+                <NavLink to='/vehical-model'>Book now</NavLink>
               </button>
               <Button
                 onClick={handleOpen}
